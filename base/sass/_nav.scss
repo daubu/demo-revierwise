@@ -1,0 +1,43 @@
+.nav {
+    height: 80px;
+    display: block;
+    background: #f1f1f1;
+    @include breakpoint(767px){   
+	    height: auto;
+    }
+    ul {
+	    text-align: center;
+	    @include breakpoint(767px){  
+		    padding: 10px 0;
+		    display: none;
+	    }
+    }
+    li {
+	    display: inline-block;
+	    @include breakpoint(767px){  
+		    display: block;
+		    padding: 10px 0;
+	    }
+	    a {
+		    display: block;
+		    color: $donker;
+		    font-size: 16px;
+		    font-weight: 700;
+		    text-transform: uppercase;
+		    height: 80px;
+		    line-height: 80px;
+		    padding: 0 18px;
+		    @include breakpoint(810px){  
+				padding: 0 12px;
+			}
+			@include breakpoint(767px){   
+				height: auto;
+				line-height: 16px;
+			}
+		    &:hover {
+			    color: $org;
+		    }
+		}
+	}
+}
+ 

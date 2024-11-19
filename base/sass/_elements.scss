@@ -1,0 +1,592 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+
+* {margin:0; padding:0;}
+body {
+	font-family: $font;
+	line-height: normal;
+	color: $donker; 
+}
+a:link, a:visited{text-decoration:none;outline:none;}
+.fleft {float:left;}
+.fright {float:right;}
+a img{border:none;}
+.hide {display:none}
+.clearfix:after {
+	content:" "; 
+	display:block; 
+	height:0;
+	font-size:0; 
+	clear:both; 
+	visibility:hidden;
+}
+.clearfix {display:inline-block;}
+/* mac hide \*/
+* html .clearfix {height:1%;}
+.clearfix {display:block;}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  text-rendering: optimizelegibility;
+  line-height:normal
+}
+h1 {font-size: 30px;}
+h2 {font-size: 24px;}
+h3 {font-size: 18px;}
+h4 {font-size: 14px;}
+h5 {font-size: 12px;}
+h6 {font-size: 11px;}
+
+*, *:before, *:after{ 
+    box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+} 
+
+
+
+input, textarea, select {font-family: $font;}
+
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #b9b9b9;
+    opacity: 1;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #b9b9b9;
+    opacity: 1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #b9b9b9;
+    opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #b9b9b9;
+    opacity: 1;
+}
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder{
+    color: transparent!important;
+    
+}
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder{
+    color: transparent!important;
+}
+input:focus:-moz-placeholder, textarea:focus:-moz-placeholder{
+    color: transparent!important;
+}
+ 
+.fixed {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.wrapper {
+	clear: both;
+	width: 98%;
+	max-width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+ 
+header {
+	display: block;
+	margin-bottom: 80px;
+}
+ 
+.top_box_left,
+.bot_box_left,
+.top_box_right,
+.bot_box_right {
+    width: 0px;
+    height: 0px;
+}
+.top_box_right {
+    border-style: solid solid solid dashed;
+    border-width: 0 0 395px 336px;
+    @include breakpoint(767px){   
+	    border-width: 0 0 80px 336px;
+    }
+}
+.top_box_left {
+    border-width: 395px 0 0 336px ;
+    border-style: solid dashed solid solid;
+    @include breakpoint(767px){  
+	    border-width: 80px 0 0 336px ;
+    }
+}
+.bot_box_right {
+    border-width: 0 336px 395px 0;
+    border-style: solid dashed solid solid;
+     @include breakpoint(767px){  
+	      border-width: 0 336px 80px 0;
+     }
+}
+.bot_box_left {
+    border-width: 395px 336px 0 0 ;
+    border-style: solid dashed solid solid;
+    @include breakpoint(767px){ 
+	    border-width: 80px 336px 0 0 ;
+    }
+}
+
+.parallax-bot {
+	border-color: transparent #FFFFFF transparent transparent;
+	margin-bottom: -70px;
+	@include breakpoint(767px){ 
+		margin-bottom: 0;
+	}
+}
+.parallax-top {
+    border-color: transparent transparent transparent #fff;
+    margin-top: -70px;
+    @include breakpoint(767px){ 
+		margin-top: 0;
+	}
+}
+
+.parallax {
+	background-repeat: no-repeat;
+	margin-top: -60px;
+	@include breakpoint(767px){  
+		margin-top: 0;
+		
+	}
+	.inner {
+		background: rgba(0, 85, 120, 0.8);
+	}
+}
+.midd-parallax {
+	text-align: center;
+	font-size: 48px;
+	line-height: 60px;
+	font-weight: 300;
+	/* width: 690px; */
+	width: 55%;
+	margin: 0 auto;
+	position: relative;
+	@include breakpoint(767px){   
+		font-size: 27px;
+	    line-height: 39px;
+	    width: 70%;
+	    padding: 90px 0 70px;
+	}
+	@include breakpoint(767px){  
+		font-size: 20px;
+	    line-height: 30px;
+	}
+	.text {
+		font-style: italic;
+		color: #fff;
+		
+	}
+	.desc {
+		color: $org;
+	}
+}
+
+.top-box {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	background: url(../images/arr-top.png) center center no-repeat $org;
+	@include border-radius(50%);
+	position: absolute;
+	top: -170px;
+	left: 43%;
+	@include breakpoint(767px){  
+		top: -80px;
+	}
+	@include breakpoint(480px){   
+		left: 39%
+	}
+	@include breakpoint(320px){  
+		left: 32%
+	}
+}
+
+.logo {
+	position: absolute;
+	top: 200px;
+	width: 100%;
+	text-align: center;
+	@include breakpoint(767px){ 
+		top: auto;
+		position: relative;
+		width: auto;
+		display: table;
+		margin: 0 auto 30px;
+		img {
+			width: 70%;
+			margin: 0 auto;
+			height: auto;
+		}
+		
+	}
+}
+
+#home-welcome {
+	/* background-size: cover; */
+	background-position: center top;
+	background-repeat: no-repeat;
+	padding-top: 174px;
+	color: #fff;
+	position: relative;
+	@include breakpoint(810px){  
+		background-size: cover;
+	}
+	@include breakpoint(767px){
+		padding-top: 70px;
+	}
+	.home-top {
+	    border-color: transparent transparent transparent rgba(0, 83, 119, 0.8);
+	}
+	.home-midd {
+		background: rgba(0, 83, 119, 0.8);
+		@include breakpoint(767px){
+			padding-top: 20px;
+		}
+	}
+	.wp-editor {
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 32px;
+		padding-bottom: 1px; 
+		text-align: center;
+		p {
+			margin-bottom: 30px;
+		}
+	}
+	h2 {
+		font-size: 48px;
+		font-weight: 400;
+		color: #fff;
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 65px; 
+		line-height: 1px;
+		position: relative;
+		@include breakpoint(767px){  
+			line-height: normal;
+			margin-bottom: 40px;
+		}
+		span {
+			color: $org;
+			&.f01 {
+				font-weight: 300;
+			}
+			&.f02 {
+				font-weight: 600;
+			}
+			&.f03 {
+				font-weight: 700;
+			}
+			&.f04 {
+				font-weight: 800;
+			}
+		}
+	}
+}
+
+.btn {
+	background: $org;
+	color: #18313a;
+	font-size: 24px;
+	font-weight: 600;
+	padding: 10px 24px;
+	display: inline-block;
+	@include border-radius(4px);
+	&:hover {
+		color: #fff;
+		background-color: #f39325;
+	}
+	&:active {
+		background: #005578;
+		color: #fff;
+	}
+}
+.meer {
+	text-align: center;
+	padding-bottom: 40px;
+	a {
+		position: relative;
+		
+		i {
+			width: 0; 
+			height: 0; 
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-top: 10px solid $org;
+			position: absolute;
+			bottom: -10px;
+			left: 45%;
+		}
+		&:active i {
+			border-top-color: #005578;
+		}
+	}
+}
+
+.section-main {
+	margin-top: -35px;
+	margin-bottom: 20px;
+	@include breakpoint(767px){  
+		margin-top: 10px;
+	}
+}
+h3.desc {
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 48px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+.padd {
+	padding: 0 20px;
+}
+.list-text {
+	overflow: hidden;
+	> li {
+		display: inline-block;
+		padding: 0 20px;
+		/* width: 477px; */
+		width: 49.5%;
+		vertical-align: top;
+		margin-bottom: 50px;
+		@include breakpoint(640px){  
+			width: 100%;
+			display: block; 
+		}
+		h3.title {
+			font-size: 32px;
+			line-height: 36px;
+			margin-bottom: 45px;
+			font-weight: 600;
+			@include breakpoint(767px){ 
+				margin-bottom: 35px;
+			}
+			span {
+				color: $org;
+			}
+		}
+	}
+}
+
+.wp-editor {
+	p {
+		margin-bottom: 25px;
+	}
+	ul {
+		list-style: outside disc;
+		margin-left: 17px;
+		li {
+			margin-bottom: 25px;
+		}
+	}
+	a {
+		color: $org;
+		&:hover {
+			text-decoration: underline; 
+		}
+	}
+}
+
+
+
+
+.social a {
+	display: inline-block;
+	background: url(../images/social.png) left top no-repeat;
+	width: 40px;
+	height: 40px;
+	text-indent: -9999px;
+	&.tw {
+		background-position: -50px 0;
+		margin-right: 15px;
+	}
+	&.fb {
+		background-position: 100% 0;
+	}
+}
+
+
+
+
+.mycont {
+    margin: 0 auto 50px;
+    max-width: 960px;
+    overflow: hidden;
+}
+.mycarousel li {
+    margin: 0 17px;
+    padding: 0;
+    text-align: center;
+    width: 250px;
+    @include breakpoint(960px){  
+		width: 240px;
+	}
+	 @include breakpoint(940px){ 
+		 width: 230px;
+	 }
+	 @include breakpoint(910px){ 
+		 width: 220px;
+	 }
+	 @include breakpoint(880px){ 
+		 width: 210px;
+	 } 
+	 @include breakpoint(870px){ 
+		 width: 200px;
+	 }
+	 @include breakpoint(820px){ 
+		 width: 190px;
+	 } 
+	 @include breakpoint(790px){  
+		 width: 180px;
+	 }
+	 @include breakpoint(767px){ 
+		 width: 260px;
+		 margin: 0 25px;
+	 }
+	  @include breakpoint(720px){ 
+		  margin: 0 15px;
+	  }
+	   @include breakpoint(690px){ 
+		  margin: 0 15px;
+		  width: 250px;
+	  } 
+	  @include breakpoint(670px){ 
+		  width: 240px;
+	  } 
+	  @include breakpoint(650px){ 
+		  width: 230px;
+	  }
+	   @include breakpoint(630px){ 
+		  width: 220px;
+	  }
+	  @include breakpoint(610px){ 
+		  width: 210px;
+	  }
+	  @include breakpoint(590px){ 
+		  width: 200px;
+	  }
+	   @include breakpoint(570px){ 
+		  width: 190px;
+	  }
+	  @include breakpoint(550px){ 
+		  width: 180px;
+	  }
+	  @include breakpoint(530px){ 
+	  	width: 170px;
+	  }
+	  @include breakpoint(510px){ 
+	  	width: 160px;
+	  }
+	   @include breakpoint(480px){ 
+	  	width: 330px;
+	  }
+	  @include breakpoint(460px){ 
+	  	width: 310px;
+	  }
+	  @include breakpoint(440px){ 
+	  	width: 290px;
+	  }
+	  @include breakpoint(420px){ 
+	  	width: 270px;
+	  }
+	  @include breakpoint(400px){ 
+	  	width: 250px;
+	  }
+	   @include breakpoint(380px){ 
+		   width: 210px;
+	   }
+	   @include breakpoint(340px){ 
+		 width: 190px;  
+	   }
+	 img {
+		 width: 100%;
+	 }
+}
+.jcarousel-clip {
+    overflow: hidden;
+}
+
+
+
+.jcarousel-prev, .jcarousel-next, .nav-slider span {
+	background: url(../images/nav-arr-slide.png) left top no-repeat;
+	display: block;
+	width: 26px;
+	height: 41px;
+	text-indent: -9999px;
+	position: absolute;
+	top: 15%;
+	cursor: pointer;
+	@include breakpoint(768px){  
+		top: 8%;
+	}
+	&:hover {
+		background-position: left bottom;
+	}
+}
+.jcarousel-prev {
+	left: -50px;
+	@include breakpoint(767px){  
+		left: -50px;
+	}
+}
+.jcarousel-next { 
+	background-position: right top;
+	right: -50px;
+	@include breakpoint(767px){  
+		right: -50px;
+	}
+	&:hover {
+		background-position: right bottom;
+	}
+}
+
+.nav-slider span.prev {
+	left: 50px;
+	top: 20%;
+}
+.nav-slider span.next {
+	background-position: right top;
+	right: 50px;
+	top: 20%;
+	&:hover {
+		background-position: right bottom;
+	}
+}
+
+.menu-mobile {
+	display: none;
+	border-bottom: #b9b9b9 1px solid;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	@include breakpoint(767px){  
+		display: block;
+	}
+	a {
+		display: inline-block;
+		background: url(../images/menu-mobile.png) right center no-repeat;
+		padding-right: 47px;
+		font-size: 24px;
+		font-weight: 700;
+		color: #18313a;
+		text-transform: uppercase;
+	}
+}
+
+@include breakpoint(767px){ 
+.padd {
+	padding: 0 0 50px;
+	text-align: center;
+	a.fright {
+		text-align: center;
+		float: none;
+	}
+}
+}
+
